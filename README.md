@@ -1,5 +1,44 @@
 <h1 align="center">AIBuildAI Knowledge Base</h1>
 
+## ABA experiment database fork
+
+This fork maintains an additional `aba-experiments` plugin on branch `yufan`, under
+`data/corpus/plugins/aba-experiments-marketplace/`. It contains three collections
+grounded in actual experiment records: continued two-turn Proximal Policy
+Optimization (PPO) evidence, execution-test accounting, and controller transport
+recovery. Each includes an observation, its limits, and a sanitized evidence
+extract. The update-28 case demonstrates specific learning/reload mechanics;
+its sampled patch did **not** resolve the assigned issue. It is not a benchmark
+improvement claim or a declaration that the full research objective is complete.
+
+To serve this additional collection without using the training GPU:
+
+```bash
+uv venv --python 3.11 --system-site-packages .venv
+uv pip install --python .venv/bin/python 'torch>=2.6,<3' --index-url https://download.pytorch.org/whl/cpu
+uv pip install --python .venv/bin/python -e '.[server]'
+export AIBUILDAI_KB_EXPERIMENT_RUNTIME="$PWD/.cache/experiments-runtime"
+bash deploy/serve_experiments.sh
+```
+
+The collection service listens only at `http://127.0.0.1:18766/mcp`. It indexes
+the added plugin using `sentence-transformers/all-MiniLM-L6-v2` on the central
+processing unit (CPU); this retrieval embedding model is separate from the
+trained task model. The service uses the unchanged upstream retrieval API and
+checks corpus/index agreement. The complete upstream corpus remains in this
+fork's Git history and the public upstream service remains available.
+Merge [deploy/aba-experiments-mcps.yaml](deploy/aba-experiments-mcps.yaml) into an
+ABA run config to retain the upstream `kb` and add the fork as `kb_experiments`.
+Running invocations need their normal session/config lifecycle to discover a
+new service; editing a file alone does not prove they have queried it.
+
+Add further findings only from actual executions. Preserve negative and
+unverified outcomes, exact method/parameter/task scope, producer bindings, and
+the distinction between observed counts and distinct coverage. Keep private
+graders, held-out answers, credentials, machine-specific paths, and model
+weights out of this public corpus. Add a dated correction rather than silently
+rewriting an old measurement.
+
 ---
 
 <p align="center">

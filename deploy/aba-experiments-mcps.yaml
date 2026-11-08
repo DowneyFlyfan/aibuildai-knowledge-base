@@ -1,0 +1,8 @@
+# Merge these entries into an ABA run config on the host serving the collection.
+# The fork service is loopback-only; use an authorized tunnel for another host.
+mcps:
+  kb: { type: reference }
+  kb_experiments:
+    type: http
+    url: http://127.0.0.1:18766/mcp
+    description: Observed ABA experiment results, proof limits, test accounting, and controller recovery from the DowneyFlyfan knowledge-base fork.

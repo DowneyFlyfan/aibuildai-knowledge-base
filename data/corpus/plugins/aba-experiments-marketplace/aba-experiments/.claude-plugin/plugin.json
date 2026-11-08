@@ -1,0 +1,4 @@
+{
+  "name": "aba-experiments",
+  "description": "Evidence from actual AIBuildAI repository-repair experiments: two-turn reinforcement learning, six-component checkpoint recovery, independent model reload, test-count scope, and controller transport failures. Observations retain their task and proof limits."
+}
