@@ -7,8 +7,8 @@ This fork maintains an additional `aba-experiments` plugin on branch `yufan`, un
 grounded in actual experiment records: continued two-turn Proximal Policy
 Optimization (PPO) evidence, execution-test accounting, and controller transport
 recovery. Each includes an observation, its limits, and a sanitized evidence
-extract. The update-28 case demonstrates specific learning/reload mechanics;
-its sampled patch did **not** resolve the assigned issue. It is not a benchmark
+extract. The update-28 and update-29 cases demonstrate specific learning/reload mechanics;
+their sampled patches did **not** resolve the assigned issue. They are not a benchmark
 improvement claim or a declaration that the full research objective is complete.
 
 To serve this additional collection without using the training GPU:
