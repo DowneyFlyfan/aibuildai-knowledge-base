@@ -7,7 +7,7 @@ description: Interpret evidence from continued two-turn Proximal Policy Optimiza
 
 This collection records a real, narrowly scoped experiment, not a benchmark result or a general training recipe. Read [the observed update-28 case](references/update28.md) for measurements and [the evidence extract](references/evidence.md) for provenance and exact hashes.
 
-Read [the continued update-29 case](references/update29.md) and [its evidence extract](references/evidence29.md) when evaluating checkpoint continuation or a consumer that rejects genuine producer evidence because field names differ. The later case preserves the earlier observation and does not close its outstanding numerical-finiteness or controller-comparison gaps.
+Read [the continued update-29 case](references/update29.md) and [its evidence extract](references/evidence29.md) when evaluating checkpoint continuation or a consumer that rejects genuine producer evidence because field names differ. Those snapshots preserve their original evidence cutoff. The [2026-11-09 numerical audit](references/numerical29-20261109.md) subsequently verified finite values and positive parameter changes for the trained actor norm and all four critic parameters; it does not establish finiteness of every actor tensor or close the controller-comparison gap.
 
 Treat these as separate claims, each requiring its own evidence:
 

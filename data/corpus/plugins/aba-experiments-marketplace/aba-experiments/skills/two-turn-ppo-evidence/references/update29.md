@@ -29,3 +29,7 @@ Finite gradients and changed state hashes do not independently prove every post-
 The controller-model change's causal effect remained **UNTESTED**. No full Element Web evaluation, benchmark improvement, broad model-performance result, or completed research objective is claimed. Updates 28 and 29 were observed genuine tested two-turn updates in this run; the inherited counter includes earlier updates with different evidence quality.
 
 See [the sanitized evidence](evidence29.md) for exact source-record hashes, producer identity, checkpoint and export bindings. The full private records remain with the experiment owner.
+
+## Later evidence, 2026-11-09
+
+The [subsequent native numerical audit](numerical29-20261109.md) verified finite values and positive update-28-to-29 differences for the trained actor norm and all four critic parameters. It also checked optimizer tensor states and step counters. This supplies numerical evidence missing at the earlier cutoff above; the original evidence extract remains an unchanged historical snapshot. It does not establish all-actor-tensor finiteness, successful final delivery, issue resolution, or the controller change's causal effect.
