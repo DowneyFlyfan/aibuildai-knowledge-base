@@ -39,6 +39,18 @@ graders, held-out answers, credentials, machine-specific paths, and model
 weights out of this public corpus. Add a dated correction rather than silently
 rewriting an old measurement.
 
+## Repository-repair research cards
+
+The additional `aba-research` plugin in `aba-experiments-marketplace` contains
+five concise primary-source cards: SWE-MILE, CodeLift/CL-Outcome, R2E-Gym-Subset,
+SWE-Gym, and SWE-rebench-V2. They record inspected source versions, applicability,
+and limitations. These are literature/dataset references, **not new local
+experiment results**. The existing `aba-experiments` collection remains limited
+to actual executions. Read only the relevant card; no new review checklist is
+required. Neither publication to Git nor a local corpus check updates a running
+retrieval service; rebuild its index and use its normal deployment lifecycle
+before claiming these cards are served.
+
 ---
 
 <p align="center">
